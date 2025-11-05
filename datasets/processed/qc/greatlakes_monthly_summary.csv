@@ -1,0 +1,6 @@
+lake_id,rows,rows_valid,frac_valid,pct_valid_geom_med,pct_valid_emp_med,lake_name
+GL-1,11,11,1.0,,,Erie
+GL-2,11,11,1.0,,,Huron
+GL-3,11,11,1.0,,,Michigan
+GL-4,11,11,1.0,,,Ontario
+GL-5,11,11,1.0,,,Superior
