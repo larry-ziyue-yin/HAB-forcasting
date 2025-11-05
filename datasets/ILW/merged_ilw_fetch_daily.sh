@@ -19,7 +19,7 @@ else
   TAIL="ILW_ALASKA.V5.all.ILW_AK.300m.nc"
 fi
 
-OUT="ILW/Merged/${YEAR}/${REG}_DAY"
+OUT="Merged/${YEAR}/${REG}_DAY"
 mkdir -p "$OUT"
 
 echo "==> Merged-S3-ILW DAILY  $REG  $YEAR  →  $OUT"

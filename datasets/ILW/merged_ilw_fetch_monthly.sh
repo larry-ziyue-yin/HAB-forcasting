@@ -31,7 +31,7 @@ last_day_of_month() {
 }
 
 for YEAR in $(expand_years "$YEARS"); do
-  OUT="ILW/Merged/${YEAR}/${REG}_MO"
+  OUT="Merged/${YEAR}/${REG}_MO"
   mkdir -p "$OUT"
   echo "==> Merged-S3-ILW MONTHLY  $REG  $YEAR  →  $OUT"
 

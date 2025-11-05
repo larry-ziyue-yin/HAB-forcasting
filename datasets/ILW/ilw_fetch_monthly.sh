@@ -45,7 +45,7 @@ last_day_of_month() {
 }
 
 for YEAR in $(expand_years "$YEARS"); do
-  OUT="ILW/${SAT}/${YEAR}/${REG}_MO"
+  OUT="${SAT}/${YEAR}/${REG}_MO"
   mkdir -p "$OUT"
   echo "==> Downloading $SAT $REG $YEAR (Monthly) → $OUT"
 
