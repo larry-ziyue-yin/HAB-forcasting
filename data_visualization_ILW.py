@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 # -----------------------------
 # Paths
 # -----------------------------
-ROOT = Path("/dkucc/home/zy166/HAB-forcasting")
+ROOT = Path("/dkucc/home/zy166/HAB-forecasting")
 QC_DIR = ROOT / "datasets/processed/qc"
 FIG_DIR = ROOT / "visualization/ILW"
 FIG_DIR.mkdir(parents=True, exist_ok=True)
