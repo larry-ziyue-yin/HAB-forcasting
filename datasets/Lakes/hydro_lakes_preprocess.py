@@ -5,8 +5,9 @@ import glob
 from shapely.geometry import box
 
 # 0) Find shapefile (avoid path errors)
-candidates = glob.glob("/dkucc/home/zy166/HAB-forcasting/datasets/Lakes/HydroLAKES_polys_v10_shp/**/HydroLAKES_polys_v10.shp", recursive=True)
-assert candidates, "找不到 HydroLAKES_polys_v10.shp，请确认解压路径"
+candidates = glob.glob("/dkucc/home/zy166/HAB-forcasting/datasets/Lakes/HydroLAKES_polys_v10_shp/**/HydroLAKES_polys_v10.shp", 
+                       recursive=True)
+assert candidates, "Cannot find HydroLAKES_polys_v10.shp, please confirm the unzip path"
 src = candidates[0]
 print("Using:", src)
 
@@ -21,7 +22,7 @@ is_us = country.str.contains("United States", case=False, regex=False)
 gdf_us = gdf[is_us].copy()
 print("US lakes (by Country contains):", len(gdf_us))
 
-# 3) Also do a "spatial range"兜底（五大湖经纬度大致包络，更稳健）
+# 3) Also do a "spatial range" fallback (Great Lakes roughly bounded by longitude: -95 ~ -74, latitude: 40 ~ 49)
 #    Longitude: -95 ~ -74, Latitude: 40 ~ 49 (adjustable)
 bbox = box(-95, 40, -74, 49)
 gdf_bbox = gdf[gdf.intersects(bbox)].copy()
